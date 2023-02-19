@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-- [Overview](#hiya!)
+- [Overview](https://github.com/JoleneKearse/fem-single-price-grid-component#hiya-)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)

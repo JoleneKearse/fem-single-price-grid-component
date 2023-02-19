@@ -11,6 +11,7 @@
   --gap-med: 1em;
   --gap-lg: 2.5em;
   --border-radius: .35rem;
+  color-scheme: light dark;
 }
 
 *, 

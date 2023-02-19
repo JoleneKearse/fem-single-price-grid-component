@@ -172,3 +172,25 @@ li:hover,
 li:focus {
   color: var(--clr-neutral-200);
 }
+
+/* ******** MEDIA QUERIES ******** */
+@media (min-width: 900px) {
+  .card {
+    width: 50vw;
+  }
+  .hero,
+  .cta,
+  .footer {
+    padding: 0 var(--gap-med);
+  }
+  .side-by-side {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* width: 100%; */
+  }
+  .cta,
+  .footer {
+    width: 100%;
+  }
+}

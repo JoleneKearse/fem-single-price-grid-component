@@ -220,6 +220,26 @@ li:focus {
   }
 }
 
+@media (orientation: landscape) {
+  .card {
+    width: 90vw;
+  }
+  .side-by-side {
+    display: flex;
+    justify-content: center;
+  }
+  .cta,
+  .footer {
+    width: 100%;
+  }
+  .cta {
+    border-radius: 0 0 0 var(--border-radius);
+  }
+  .footer {
+    border-radius: 0 0 var(--border-radius) 0;
+  }
+}
+
 @media (prefers-dark-scheme: dark) {
   body {
     background-color: var(--clr-neutral-900);

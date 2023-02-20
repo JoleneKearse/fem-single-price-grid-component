@@ -1,6 +1,11 @@
+/* ******** CUSTOM PROPERTIES ******** */
+
 :root {
   --clr-neutral-100: #ffffff;
   --clr-neutral-200: #e2edf3;
+  --clr-neutral-500: #aba8a8;
+  --clr-neutral-800: #3d3b3b;
+  --clr-neutral-900: #000000;
   --clr-accent-teal-400: hsl(180, 49%, 82%);
   --clr-accent-teal-500: hsl(180, 53%, 72%);
   --clr-accent-teal-600: hsl(179, 44%, 53%);
@@ -13,6 +18,8 @@
   --border-radius: .35rem;
   color-scheme: light dark;
 }
+
+/* ******** RESET ******** */
 
 *, 
 *::before,
@@ -40,22 +47,15 @@ body {
 }
 
 body {
-  position: relative;
   background-color: var(--clr-neutral-200);
   font-family: 'Karla', sans-serif;
   font-size: 1rem;
+  font-weight: 400;
 }
 
 button,
 a {
   cursor: pointer;
-}
-
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 /* ******** TYPOGRAPHY ******** */
@@ -66,13 +66,18 @@ h2 {
 }
 
 h1 {
-  color: var(--clr-accent-teal-900);
+  color: var(--clr-accent-teal-900) !important;
+}
+
+.cta-info,
+.price,
+.btn-cta {
+  font-weight: 700;
 }
 
 .cta-info {
   font-size: 1.175rem;
-  font-weight: 700;
-  color: var(--clr-accent-green);
+  color: var(--clr-accent-green) !important;
 }
 
 .hero-p,
@@ -88,23 +93,18 @@ h1 {
 
 
 .pricing {
-  display: flex;
-  align-items: center;
-  gap: .5em;
-  margin: -1rem 0 -2rem 0;
-  padding: 0;
   font-size: 1.25rem;
   color: var(--clr-accent-teal-500);
 }
 
 .price {
   font-size: 2.35rem;
-  font-weight: 700;
+
   color: var(--clr-neutral-100)
 }
 
 .price-incentive {
-  padding-bottom: 1em;
+  padding-bottom: var(--gap-med);
   color: var(--clr-accent-teal-400)
 }
 
@@ -113,11 +113,25 @@ h1 {
   color: var(--clr-neutral-100);
 }
 
+.attribution {
+  color: var(--clr-neutral-900);
+}
+
 /* ******** LAYOUT ******** */
+
+body {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .card {
   width: 375px;
-  /* margin: auto; */
   border-radius: var(--border-radius);
   background-color: var(--clr-neutral-100);
 }
@@ -149,7 +163,6 @@ section * {
   background-color: var(--clr-accent-green);
   box-shadow: .25rem .5rem 1em hsla(218, 70%, 30%, 0.025);
   color: var(--clr-neutral-100);
-  font-weight: 700;
   letter-spacing: .15rem;
   transition: all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
@@ -203,5 +216,14 @@ li:focus {
   }
   .footer {
     border-radius: 0 0 var(--border-radius) 0;
+  }
+}
+
+@media (prefers-dark-scheme: dark) {
+  body {
+    background-color: var(--clr-neutral-900);
+  }
+  .hero {
+    background-color: var(--clr-neutral-800);
   }
 }

@@ -194,6 +194,16 @@ li:focus {
 /* ******** MEDIA QUERIES ******** */
 
 @media (orientation: landscape) {
+  body {
+    position: relative;
+  }
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+  }
   .card {
     width: 90vw;
   }
@@ -214,8 +224,18 @@ li:focus {
 }
 
 @media (min-width: 950px) {
+  body {
+    position: relative;
+  }
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+  }
   .card {
-    width: 50vw;
+    width: 40vw;
   }
   .hero,
   .cta,
